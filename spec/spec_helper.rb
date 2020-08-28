@@ -4,7 +4,7 @@ require 'simplecov'
 SimpleCov.start
 
 require 'bundler/setup'
-require 'vex'
+require 'vox'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
