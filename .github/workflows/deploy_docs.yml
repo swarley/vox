@@ -1,0 +1,44 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+# This workflow will download a prebuilt Ruby version, install dependencies and run tests with Rake
+# For more information see: https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
+
+name: Deploy Docs
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "vex.gemspec"
+      - "CHANGELOG.md"
+      - ".rubocop.yml"
+      - ".rspec"
+      - "Rakefile"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.0
+          bundler-cache: true
+      - name: Install dependencies
+        run: bundle install
+      - name: Run YARD
+        run: bundle exec yard --output-dir docs
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.7.0-8
+        with:
+          personal_token: ${{ secrets.DEPLOY_TOKEN }}
+          publish_dir: docs
+          destination_dir: ${{ steps.extract_branch.outputs.branch }}

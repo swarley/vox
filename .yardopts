@@ -1,0 +1,4 @@
+--tag vex.permissions:"Required Permissions"
+--tag vex.api_docs:"View On Discord's Docs"
+--tag vex.oauth_scope:"Required OAuth2 Scope"
+--main README.md

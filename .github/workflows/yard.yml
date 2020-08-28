@@ -1,0 +1,39 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+# This workflow will download a prebuilt Ruby version, install dependencies and run tests with Rake
+# For more information see: https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
+
+name: YARD
+
+on:
+  push:
+    paths-ignore:
+      - "vex.gemspec"
+      - "CHANGELOG.md"
+      - ".rubocop.yml"
+      - ".rspec"
+      - "Rakefile"
+  pull_request:
+    paths-ignore:
+      - "vex.gemspec"
+      - "CHANGELOG.md"
+      - ".rubocop.yml"
+      - ".rspec"
+      - "Rakefile"
+
+jobs:
+  yard:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7.0
+        bundler-cache: true
+    - name: Install dependencies
+      run: bundle install
+    - name: Run Rubocop
+      run: bundle exec yard doc

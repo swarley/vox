@@ -1,0 +1,22 @@
+require:
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - bin/*
+    - vendor/**/*
+  NewCops: enable
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/RaiseArgs:
+  Enabled: false
+
+RSpec/FilePath:
+  SpecSuffixOnly: true
+
+Metrics:
+  Enabled: false
