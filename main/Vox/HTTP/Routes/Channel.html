@@ -1,0 +1,4630 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Vox::HTTP::Routes::Channel
+  
+    &mdash; Documentation by YARD 0.9.25
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Vox::HTTP::Routes::Channel";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Vox.html" title="Vox (module)">Vox</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../HTTP.html" title="Vox::HTTP (module)">HTTP</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Routes.html" title="Vox::HTTP::Routes (module)">Routes</a></span></span>
+     &raquo; 
+    <span class="title">Channel</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Vox::HTTP::Routes::Channel
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/vox/http/routes/channel.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Mixin for /channel/ routes.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="TYPES-constant" class="">TYPES =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Channel types.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='label'>GUILD_TEXT:</span> <span class='int'>0</span><span class='comma'>,</span>
+  <span class='label'>DM:</span> <span class='int'>1</span><span class='comma'>,</span>
+  <span class='label'>GUILD_VOICE:</span> <span class='int'>2</span><span class='comma'>,</span>
+  <span class='label'>GROUP_DM:</span> <span class='int'>3</span><span class='comma'>,</span>
+  <span class='label'>GUILD_CATEGORY:</span> <span class='int'>4</span><span class='comma'>,</span>
+  <span class='label'>GUILD_NEWS:</span> <span class='int'>5</span><span class='comma'>,</span>
+  <span class='label'>GUILD_STORE:</span> <span class='int'>6</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_pinned_channel_message-instance_method" title="#add_pinned_channel_message (instance method)">#<strong>add_pinned_channel_message</strong>(channel_id, message_id, reason: nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add a message to a channel&#39;s pins.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bulk_delete_messages-instance_method" title="#bulk_delete_messages (instance method)">#<strong>bulk_delete_messages</strong>(channel_id, messages, reason: nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete multiple message in a single request.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_channel_invite-instance_method" title="#create_channel_invite (instance method)">#<strong>create_channel_invite</strong>(channel_id, max_age: :undef, max_uses: :undef, temporary: :undef, unique: :undef, target_user: :undef, target_user_type: :undef, reason: nil)  &#x21d2; Hash&lt;Symbol, Object&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new invite for a channel.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_message-instance_method" title="#create_message (instance method)">#<strong>create_message</strong>(channel_id, content: :undef, nonce: :undef, tts: :undef, file: :undef, embed: :undef, allowed_mentions: :undef, attachments: :undef)  &#x21d2; Hash&lt;Symbol, Object&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a message in a channel.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_reaction-instance_method" title="#create_reaction (instance method)">#<strong>create_reaction</strong>(channel_id, message_id, emoji)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a reaction on a message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_all_reactions-instance_method" title="#delete_all_reactions (instance method)">#<strong>delete_all_reactions</strong>(channel_id, message_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete all reactions on a message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_all_reactions_for_emoji-instance_method" title="#delete_all_reactions_for_emoji (instance method)">#<strong>delete_all_reactions_for_emoji</strong>(channel_id, message_id, emoji)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete all reactions of a specific emoji on a message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_channel-instance_method" title="#delete_channel (instance method)">#<strong>delete_channel</strong>(channel_id, reason: nil)  &#x21d2; Hash&lt;Symbol, Object&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete a channel by ID, or close a private message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_channel_permission-instance_method" title="#delete_channel_permission (instance method)">#<strong>delete_channel_permission</strong>(channel_id, overwrite_id, reason: nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete a channel permission overwrite for a user or role in a channel.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_message-instance_method" title="#delete_message (instance method)">#<strong>delete_message</strong>(channel_id, message_id, reason: nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete a previously sent message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_own_reaction-instance_method" title="#delete_own_reaction (instance method)">#<strong>delete_own_reaction</strong>(channel_id, message_id, emoji)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete a reaction from the current user on a message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_pinned_channel_message-instance_method" title="#delete_pinned_channel_message (instance method)">#<strong>delete_pinned_channel_message</strong>(channel_id, message_id, reason: nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove a message from a channel&#39;s pins.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_user_reaction-instance_method" title="#delete_user_reaction (instance method)">#<strong>delete_user_reaction</strong>(channel_id, message_id, emoji, user_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete a reaction from a user on a message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#edit_channel_permissions-instance_method" title="#edit_channel_permissions (instance method)">#<strong>edit_channel_permissions</strong>(channel_id, overwrite_id, allow:, deny:, type:, reason: nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Edit the channel permission overwrites for a user or role in a channel.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#edit_message-instance_method" title="#edit_message (instance method)">#<strong>edit_message</strong>(channel_id, message_id, content: :undef, embed: :undef, flags: :undef)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Edit a previously sent message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_channel-instance_method" title="#get_channel (instance method)">#<strong>get_channel</strong>(channel_id)  &#x21d2; Hash&lt;Symbol, Object&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get a channel by ID.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_channel_invites-instance_method" title="#get_channel_invites (instance method)">#<strong>get_channel_invites</strong>(channel_id)  &#x21d2; Array&lt;Hash&lt;Symbol, Object&gt;&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get a list of invites (with invite metadata) for a channel.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_channel_message-instance_method" title="#get_channel_message (instance method)">#<strong>get_channel_message</strong>(channel_id, message_id)  &#x21d2; Hash&lt;Symbol, Object&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get a specific message from a channel by ID.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_channel_messages-instance_method" title="#get_channel_messages (instance method)">#<strong>get_channel_messages</strong>(channel_id, around: :undef, before: :undef, after: :undef, limit: :undef)  &#x21d2; Array&lt;Hash&lt;Symbol, Object&gt;&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get messages from a channel, by channel ID.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_pinned_messages-instance_method" title="#get_pinned_messages (instance method)">#<strong>get_pinned_messages</strong>(channel_id)  &#x21d2; Array&lt;Hash&lt;Symbol, Object&gt;&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get all pinned messages in a channel.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_reactions-instance_method" title="#get_reactions (instance method)">#<strong>get_reactions</strong>(channel_id, message_id, emoji, before: :undef, after: :undef, limit: :undef)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get a list of users that have reacted with a specific emoji.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#group_dm_add_recipient-instance_method" title="#group_dm_add_recipient (instance method)">#<strong>group_dm_add_recipient</strong>(channel_id, user_id, access_token:, nick: :undef)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add a recipient to a group DM using their access token.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#group_dm_remove_recipient-instance_method" title="#group_dm_remove_recipient (instance method)">#<strong>group_dm_remove_recipient</strong>(channel_id, user_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove a recipient from a group DM.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#modify_channel-instance_method" title="#modify_channel (instance method)">#<strong>modify_channel</strong>(channel_id, name: :undef, type: :undef, position: :undef, topic: :undef, nsfw: :undef, rate_limit_per_user: :undef, bitrate: :undef, user_limit: :undef, permission_overwrites: :undef, parent_id: :undef, reason: nil)  &#x21d2; Hash&lt;Symbol, Object&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Update a channel&#39;s settings.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#trigger_typing_indicator-instance_method" title="#trigger_typing_indicator (instance method)">#<strong>trigger_typing_indicator</strong>(channel_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Post a typing indicator for a channel.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_pinned_channel_message-instance_method">
+  
+    #<strong>add_pinned_channel_message</strong>(channel_id, message_id, reason: nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add a message to a channel&#39;s pins.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel to add a pinned message to.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the message to pin.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The reason a message is being pinned.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>MANAGE_MESSAGES</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#add-pinned-channel-message">discord.com/developers/docs/resources/channel#add-pinned-channel-message</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+381
+382
+383
+384
+385</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 381</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_pinned_channel_message'>add_pinned_channel_message</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:POST</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/pins/%{message_id}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>message_id:</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bulk_delete_messages-instance_method">
+  
+    #<strong>bulk_delete_messages</strong>(channel_id, messages, reason: nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>The endpoint will not delete messages older than 2 weeks and will fail with <span class='object_link'><a href="../Error/BadRequest.html" title="Vox::HTTP::Error::BadRequest (class)">Error::BadRequest</a></span> if any message provided is older than that, or a duplicate within the list of message IDs.</p>
+</div>
+  </div>
+
+
+<p>Delete multiple message in a single request.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel that contains the target messages.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>messages</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;String, Integer&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The IDs of the target messages.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The reason the messages are being deleted.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>MANAGE_MESSAGES</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#bulk-delete-messages">discord.com/developers/docs/resources/channel#bulk-delete-messages</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+292
+293
+294
+295</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 292</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bulk_delete_messages'>bulk_delete_messages</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_messages'>messages</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:POST</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/messages/bulk-delete</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>json:</span> <span class='lbrace'>{</span> <span class='label'>messages:</span> <span class='id identifier rubyid_messages'>messages</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_channel_invite-instance_method">
+  
+    #<strong>create_channel_invite</strong>(channel_id, max_age: :undef, max_uses: :undef, temporary: :undef, unique: :undef, target_user: :undef, target_user_type: :undef, reason: nil)  &#x21d2; <tt>Hash&lt;Symbol, Object&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a new invite for a channel. All parameters aside from `channel_id` are optional.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel to create an invite in.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>max_age</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Duration of invite in seconds before expiry, or 0 for never. Defaults to 24 hours.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>max_uses</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Maximum number of uses, or 0 for unlimited uses. Defaults to 0.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>temporary</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Whether this invite only grants temporary membership. Defaults to false.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>unique</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Whether or not to avoid using an existing similar invite. Defaults to false.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>target_user</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the user intended for this invite.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>target_user_type</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The [target user type](<a href="https://discord.com/developers/docs/resources/invite#invite-object-target-user-types">discord.com/developers/docs/resources/invite#invite-object-target-user-types</a>) of this invite.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The reason for creating this invite.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;Symbol, Object&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The created [invite object](<a href="https://discord.com/developers/docs/resources/invite#invite-object-invite-structure">discord.com/developers/docs/resources/invite#invite-object-invite-structure</a>).</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>CREATE_INSTANT_INVITE</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#create-channel-invite">discord.com/developers/docs/resources/channel#create-channel-invite</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+337
+338
+339
+340
+341
+342
+343</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 337</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_channel_invite'>create_channel_invite</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>max_age:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>max_uses:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>temporary:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>unique:</span> <span class='symbol'>:undef</span><span class='comma'>,</span>
+                          <span class='label'>target_user:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>target_user_type:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:POST</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/invites</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='id identifier rubyid_filter_undef'>filter_undef</span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>max_age:</span> <span class='id identifier rubyid_max_age'>max_age</span><span class='comma'>,</span> <span class='label'>max_uses:</span> <span class='id identifier rubyid_max_uses'>max_uses</span><span class='comma'>,</span> <span class='label'>temporary:</span> <span class='id identifier rubyid_temporary'>temporary</span><span class='comma'>,</span> <span class='label'>unique:</span> <span class='id identifier rubyid_unique'>unique</span><span class='comma'>,</span>
+                        <span class='label'>target_user:</span> <span class='id identifier rubyid_target_user'>target_user</span><span class='comma'>,</span> <span class='label'>target_user_type:</span> <span class='id identifier rubyid_target_user_type'>target_user_type</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>json:</span> <span class='id identifier rubyid_json'>json</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_message-instance_method">
+  
+    #<strong>create_message</strong>(channel_id, content: :undef, nonce: :undef, tts: :undef, file: :undef, embed: :undef, allowed_mentions: :undef, attachments: :undef)  &#x21d2; <tt>Hash&lt;Symbol, Object&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>You must send one of `content`, `embed`, or `file`.</p>
+</div>
+  </div>
+
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>If `tts` is set to `true`, you also require the `SEND_TTS_MESSAGES` permission.</p>
+</div>
+  </div>
+
+
+<p>Create a message in a channel. All parameters other than `channel_id` are optional.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target channel.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>content</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Message contents, up to 2000 characters.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>nonce</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A nonce used for optimistic message sending.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>tts</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Whether this message should use TTS (text to speech).</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>file</span>
+      
+      
+        <span class='type'>(<tt>File</tt>, <tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A File object, or path to a file, to be uploaded.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>embed</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Embedded rich content. See [embed object](<a href="https://discord.com/developers/docs/resources/channel#embed-object">discord.com/developers/docs/resources/channel#embed-object</a>).</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>allowed_mentions</span>
+      
+      
+        <span class='type'>(<tt>Hash&lt;(:parse, :roles, :users), Array&lt;:roles, :users, :everyone&gt;&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Rules for what mentions are allowed in the message. See [allowed_mentions object](<a href="https://discord.com/developers/docs/resources/channel#allowed-mentions-object">discord.com/developers/docs/resources/channel#allowed-mentions-object</a>).</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attachments</span>
+      
+      
+        <span class='type'>(<tt>Hash&lt;String, <span class='object_link'><a href="../UploadIO.html" title="Vox::HTTP::UploadIO (class)">UploadIO</a></span>&gt;</tt>, <tt>Array&lt;<span class='object_link'><a href="../UploadIO.html" title="Vox::HTTP::UploadIO (class)">UploadIO</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A hash in the form of `filename =&gt; upload_io` to be referenced in embeds via the `attachment://` URI, or an array of <span class='object_link'><a href="../UploadIO.html" title="Vox::HTTP::UploadIO (class)">UploadIO</a></span> who&#39;s filenames are derived from the existing UploadIO object. See [attachment:// docs](<a href="https://discord.com/developers/docs/resources/channel#create-message-using-attachments-within-embeds">discord.com/developers/docs/resources/channel#create-message-using-attachments-within-embeds</a>).</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;Symbol, Object&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The created [message](<a href="https://discord.com/developers/docs/resources/channel#message-object">discord.com/developers/docs/resources/channel#message-object</a>) object.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>SEND_MESSAGES SEND_TTS_MESSAGES</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#create-message">discord.com/developers/docs/resources/channel#create-message</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 141</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_message'>create_message</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>content:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>nonce:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>tts:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>file:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>embed:</span> <span class='symbol'>:undef</span><span class='comma'>,</span>
+                   <span class='label'>allowed_mentions:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>attachments:</span> <span class='symbol'>:undef</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:POST</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/messages</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='id identifier rubyid_filter_undef'>filter_undef</span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>content:</span> <span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='label'>nonce:</span> <span class='id identifier rubyid_nonce'>nonce</span><span class='comma'>,</span> <span class='label'>tts:</span> <span class='id identifier rubyid_tts'>tts</span><span class='comma'>,</span> <span class='label'>embed:</span> <span class='id identifier rubyid_embed'>embed</span><span class='comma'>,</span>
+                        <span class='label'>allowed_mentions:</span> <span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_file'>file</span> <span class='op'>!=</span> <span class='symbol'>:undef</span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>file:</span> <span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='label'>payload_json:</span> <span class='const'>MultiJson</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='id identifier rubyid_json'>json</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_attachments'>attachments</span> <span class='op'>!=</span> <span class='symbol'>:undef</span>
+    <span class='id identifier rubyid_attachments'>attachments</span> <span class='op'>=</span> <span class='id identifier rubyid_attachments'>attachments</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="../UploadIO.html" title="Vox::HTTP::UploadIO (class)">UploadIO</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../UploadIO.html#initialize-instance_method" title="Vox::HTTP::UploadIO#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_io'>io</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_content_type'>content_type</span><span class='comma'>,</span> <span class='id identifier rubyid_k'>k</span><span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_attachments'>attachments</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Hash</span>
+    <span class='id identifier rubyid_attach_hash'>attach_hash</span> <span class='op'>=</span> <span class='const'>Array</span><span class='lparen'>(</span><span class='int'>0</span><span class='op'>...</span><span class='id identifier rubyid_attachments'>attachments</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_zip'>zip</span><span class='lparen'>(</span><span class='id identifier rubyid_attachments'>attachments</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_attach_hash'>attach_hash</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>payload_json:</span> <span class='const'>MultiJson</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='id identifier rubyid_json'>json</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>json:</span> <span class='id identifier rubyid_json'>json</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_reaction-instance_method">
+  
+    #<strong>create_reaction</strong>(channel_id, message_id, emoji)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>Requires `READ_MESSAGE_HISTORY`, and `ADD_REACTIONS` if no other user has reacted with the emoji.</p>
+</div>
+  </div>
+
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>If your emoji is in the wrong format you will receive error code `10014: Unknown Emoji`</p>
+</div>
+  </div>
+
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>If the emoji name is unknown, you can provide any alphanumeric value as a placeholder.</p>
+</div>
+  </div>
+
+
+<p>Create a reaction on a message.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel that contains the target message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>emoji</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Either a unicode emoji, or Discord emoji in the format of `name:id`.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>READ_MESSAGE_HISTORY ADD_REACTIONS</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#create-reaction">discord.com/developers/docs/resources/channel#create-reaction</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+170
+171
+172
+173
+174
+175</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 170</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_reaction'>create_reaction</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='id identifier rubyid_emoji'>emoji</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_escaped_emoji'>escaped_emoji</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_encode_www_form_component'>encode_www_form_component</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:PUT</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/messages/%{message_id}/reactions/%{emoji}/@me</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>message_id:</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='label'>emoji:</span> <span class='id identifier rubyid_escaped_emoji'>escaped_emoji</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_all_reactions-instance_method">
+  
+    #<strong>delete_all_reactions</strong>(channel_id, message_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Delete all reactions on a message.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel that contains the target message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target message.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>MANAGE_MESSAGES</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#delete-all-reactions">discord.com/developers/docs/resources/channel#delete-all-reactions</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+231
+232
+233
+234
+235</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 231</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_all_reactions'>delete_all_reactions</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:DELETE</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/messages/%{message_id}/reactions</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>message_id:</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_all_reactions_for_emoji-instance_method">
+  
+    #<strong>delete_all_reactions_for_emoji</strong>(channel_id, message_id, emoji)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>If your emoji is in the wrong format you will receive error code `10014: Unknown Emoji`</p>
+</div>
+  </div>
+
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>If the emoji name is unknown, you can provide any alphanumeric value as a placeholder.</p>
+</div>
+  </div>
+
+
+<p>Delete all reactions of a specific emoji on a message.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel that contains the target message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>emoji</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Either a unicode emoji, or Discord emoji in the format of `name:id`.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>MANAGE_MESSAGES</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#delete-all-reactions-for-emoji">discord.com/developers/docs/resources/channel#delete-all-reactions-for-emoji</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+245
+246
+247
+248
+249
+250</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 245</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_all_reactions_for_emoji'>delete_all_reactions_for_emoji</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='id identifier rubyid_emoji'>emoji</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_escaped_emoji'>escaped_emoji</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_encode_www_form_component'>encode_www_form_component</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:DELETE</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/messages/%{message_id}/reactions/%{emoji}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>message_id:</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='label'>emoji:</span> <span class='id identifier rubyid_escaped_emoji'>escaped_emoji</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_channel-instance_method">
+  
+    #<strong>delete_channel</strong>(channel_id, reason: nil)  &#x21d2; <tt>Hash&lt;Symbol, Object&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>Fires a channel delete event.</p>
+</div>
+  </div>
+
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>Deleting a category will not delete its children, each child will have its `parent_id` field removed and a channel update will be fired for each of them.</p>
+</div>
+  </div>
+
+
+<p>Delete a channel by ID, or close a private message.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel to be deleted.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The reason the channel is being deleted.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;Symbol, Object&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The [channel](<a href="https://discord.com/developers/docs/resources/channel#channel-object">discord.com/developers/docs/resources/channel#channel-object</a>) object of the deleted channel.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>MANAGE_CHANNELS</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#deleteclose-channel">discord.com/developers/docs/resources/channel#deleteclose-channel</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85
+86
+87</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 84</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_channel'>delete_channel</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:DELETE</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_channel_permission-instance_method">
+  
+    #<strong>delete_channel_permission</strong>(channel_id, overwrite_id, reason: nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>Only usable within guild channels.</p>
+</div>
+  </div>
+
+
+<p>Delete a channel permission overwrite for a user or role in a channel.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel that contains the target overwrite.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>overwrite_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target user or role.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The reason this overwrite is being deleted.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>MANAGE_ROLES</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#delete-channel-permission">discord.com/developers/docs/resources/channel#delete-channel-permission</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+352
+353
+354
+355
+356</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 352</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_channel_permission'>delete_channel_permission</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_overwrite_id'>overwrite_id</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:DELETE</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/permissions/%{overwrite_id}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>overwrite_id:</span> <span class='id identifier rubyid_overwrite_id'>overwrite_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_message-instance_method">
+  
+    #<strong>delete_message</strong>(channel_id, message_id, reason: nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Delete a previously sent message.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel that contains the target message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The reason for deleting this message.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>MANAGE_MESSAGES (if not the message was not sent by the current user)</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#delete-message">discord.com/developers/docs/resources/channel#delete-message</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+278
+279
+280
+281
+282</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 278</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_message'>delete_message</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:DELETE</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/messages/%{message_id}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>message_id:</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_own_reaction-instance_method">
+  
+    #<strong>delete_own_reaction</strong>(channel_id, message_id, emoji)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>If your emoji is in the wrong format you will receive error code `10014: Unknown Emoji`</p>
+</div>
+  </div>
+
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>If the emoji name is unknown, you can provide any alphanumeric value as a placeholder.</p>
+</div>
+  </div>
+
+
+<p>Delete a reaction from the current user on a message.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel that contains the target message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>emoji</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Either a unicode emoji, or Discord emoji in the format of `name:id`.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#delete-own-reaction">discord.com/developers/docs/resources/channel#delete-own-reaction</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+184
+185
+186
+187
+188
+189</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 184</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_own_reaction'>delete_own_reaction</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='id identifier rubyid_emoji'>emoji</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_escaped_emoji'>escaped_emoji</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_encode_www_form_component'>encode_www_form_component</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:DELETE</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/messages/%{message_id}/reactions/%{emoji}/@me</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>message_id:</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='label'>emoji:</span> <span class='id identifier rubyid_escaped_emoji'>escaped_emoji</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_pinned_channel_message-instance_method">
+  
+    #<strong>delete_pinned_channel_message</strong>(channel_id, message_id, reason: nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove a message from a channel&#39;s pins.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel to remove a pinned message from.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the message to unpin.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The reason a message is being unpinned.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>MANAGE_MESSAGES</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#delete-pinned-channel-message">discord.com/developers/docs/resources/channel#delete-pinned-channel-message</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+393
+394
+395
+396
+397</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 393</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_pinned_channel_message'>delete_pinned_channel_message</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:DELETE</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/pins/%{message_id}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>message_id:</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_user_reaction-instance_method">
+  
+    #<strong>delete_user_reaction</strong>(channel_id, message_id, emoji, user_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>If your emoji is in the wrong format you will receive error code `10014: Unknown Emoji`</p>
+</div>
+  </div>
+
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>If the emoji name is unknown, you can provide any alphanumeric value as a placeholder.</p>
+</div>
+  </div>
+
+
+<p>Delete a reaction from a user on a message.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel that contains the target message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>emoji</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Either a unicode emoji, or Discord emoji in the format of `name:id`.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the user to delete the reaction for.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>MANAGE_MESSAGES</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>MANAGE_MESSAGES</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#delete-user-reaction">discord.com/developers/docs/resources/channel#delete-user-reaction</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+201
+202
+203
+204
+205
+206</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 201</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_user_reaction'>delete_user_reaction</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='id identifier rubyid_emoji'>emoji</span><span class='comma'>,</span> <span class='id identifier rubyid_user_id'>user_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_escaped_emoji'>escaped_emoji</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_encode_www_form_component'>encode_www_form_component</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:DELETE</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/messages/%{message_id}/reactions/%{emoji}/%{user_id}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>message_id:</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='label'>emoji:</span> <span class='id identifier rubyid_escaped_emoji'>escaped_emoji</span><span class='comma'>,</span> <span class='label'>user_id:</span> <span class='id identifier rubyid_user_id'>user_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="edit_channel_permissions-instance_method">
+  
+    #<strong>edit_channel_permissions</strong>(channel_id, overwrite_id, allow:, deny:, type:, reason: nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>Only usable for guild channels.</p>
+</div>
+  </div>
+
+
+<p>Edit the channel permission overwrites for a user or role in a channel.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel that contains the target overwrite.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>overwrite_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target user or role.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>allow</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Bitwise value of all allowed permissions.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>deny</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Bitwise value of all denied permissions.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt>:member</tt>, <tt>:role</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>MANAGE_ROLES</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#edit-channel-permissions">discord.com/developers/docs/resources/channel#edit-channel-permissions</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+306
+307
+308
+309
+310
+311</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 306</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_edit_channel_permissions'>edit_channel_permissions</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_overwrite_id'>overwrite_id</span><span class='comma'>,</span> <span class='label'>allow:</span><span class='comma'>,</span> <span class='label'>deny:</span><span class='comma'>,</span> <span class='label'>type:</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:PUT</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/permissions/%{overwrite_id}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>overwrite_id:</span> <span class='id identifier rubyid_overwrite_id'>overwrite_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>allow:</span> <span class='id identifier rubyid_allow'>allow</span><span class='comma'>,</span> <span class='label'>deny:</span> <span class='id identifier rubyid_deny'>deny</span><span class='comma'>,</span> <span class='label'>type:</span> <span class='id identifier rubyid_type'>type</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>json:</span> <span class='id identifier rubyid_json'>json</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="edit_message-instance_method">
+  
+    #<strong>edit_message</strong>(channel_id, message_id, content: :undef, embed: :undef, flags: :undef)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>You can only edit the flags of a message not sent by the current user, and only if the current user has `MANAGE_MESSAGES` permissions.</p>
+</div>
+  </div>
+
+
+<p>Edit a previously sent message. All parameters other than `channel_id` and `message_id` are optional and nullable.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel that contains the target message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>content</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The message content. If `nil`, existing content will be removed.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>embed</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Embedded rich content. If `nil`, the existing embed will be removed.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>flags</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Message flags. If `nil`, the existing flags will be removed. When setting flags be sure to include all previously set flags in addition to the ones you are modifying. See [message flags](<a href="https://discord.com/developers/docs/resources/channel#message-object-message-flags">discord.com/developers/docs/resources/channel#message-object-message-flags</a>).</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>MANAGE_MESSAGES (if editing the flags of a message not sent by the current user)</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#edit-message">discord.com/developers/docs/resources/channel#edit-message</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+265
+266
+267
+268
+269
+270</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 265</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_edit_message'>edit_message</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='label'>content:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>embed:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>flags:</span> <span class='symbol'>:undef</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:PATCH</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/messages/%{message_id}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>message_id:</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='id identifier rubyid_filter_undef'>filter_undef</span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>content:</span> <span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='label'>embed:</span> <span class='id identifier rubyid_embed'>embed</span><span class='comma'>,</span> <span class='label'>flags:</span> <span class='id identifier rubyid_flags'>flags</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>json:</span> <span class='id identifier rubyid_json'>json</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_channel-instance_method">
+  
+    #<strong>get_channel</strong>(channel_id)  &#x21d2; <tt>Hash&lt;Symbol, Object&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get a channel by ID.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the desired channel.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;Symbol, Object&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A [channel](<a href="https://discord.com/developers/docs/resources/channel#channel-object">discord.com/developers/docs/resources/channel#channel-object</a>) object.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#get-channel">discord.com/developers/docs/resources/channel#get-channel</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_channel'>get_channel</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:GET</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_channel_invites-instance_method">
+  
+    #<strong>get_channel_invites</strong>(channel_id)  &#x21d2; <tt>Array&lt;Hash&lt;Symbol, Object&gt;&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get a list of invites (with invite metadata) for a channel.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target channel.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Hash&lt;Symbol, Object&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An array of [invite objects](<a href="https://discord.com/developers/docs/resources/invite#invite-object-invite-structure">discord.com/developers/docs/resources/invite#invite-object-invite-structure</a>) with [invite metadata](<a href="https://discord.com/developers/docs/resources/invite#invite-metadata-object-invite-metadata-structure">discord.com/developers/docs/resources/invite#invite-metadata-object-invite-metadata-structure</a>).</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>MANAGE_CHANNELS</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#get-channel-invites">discord.com/developers/docs/resources/channel#get-channel-invites</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+319
+320
+321
+322</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 319</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_channel_invites'>get_channel_invites</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:GET</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/invites</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_channel_message-instance_method">
+  
+    #<strong>get_channel_message</strong>(channel_id, message_id)  &#x21d2; <tt>Hash&lt;Symbol, Object&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>In guild channels the `READ_MESSAGE_HISTORY` permission is requred.</p>
+</div>
+  </div>
+
+
+<p>Get a specific message from a channel by ID.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel containing the desired message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the desired message.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;Symbol, Object&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The [message](<a href="https://discord.com/developers/docs/resources/channel#message-object">discord.com/developers/docs/resources/channel#message-object</a>) object.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>READ_MESSAGE_HISTORY</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#get-channel-message">discord.com/developers/docs/resources/channel#get-channel-message</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118
+119
+120
+121</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 117</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_channel_message'>get_channel_message</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:GET</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/messages/%{message_id}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>message_id:</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_channel_messages-instance_method">
+  
+    #<strong>get_channel_messages</strong>(channel_id, around: :undef, before: :undef, after: :undef, limit: :undef)  &#x21d2; <tt>Array&lt;Hash&lt;Symbol, Object&gt;&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>If you lack the `READ_MESSAGE_HISTORY` permission in the desired channel this will return no messages.</p>
+</div>
+  </div>
+
+
+<p>Get messages from a channel, by channel ID. All parameters other than `channel_id` are optional.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel where the messages are being fetched from.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>around</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Retreive messages around this ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>before</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Retreive messages before this ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>after</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Retreive messages after this ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>limit</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Maximum number of messages to return. Can be between 1-100.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Hash&lt;Symbol, Object&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>[Message](<a href="https://discord.com/developers/docs/resources/channel#message-object">discord.com/developers/docs/resources/channel#message-object</a>) objects returned from the channel history.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>VIEW_CHANNEL</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#get-channel-messages">discord.com/developers/docs/resources/channel#get-channel-messages</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+103
+104
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 103</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_channel_messages'>get_channel_messages</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>around:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>before:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>after:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>limit:</span> <span class='symbol'>:undef</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:GET</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/messages</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='id identifier rubyid_filter_undef'>filter_undef</span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>around:</span> <span class='id identifier rubyid_around'>around</span><span class='comma'>,</span> <span class='label'>before:</span> <span class='id identifier rubyid_before'>before</span><span class='comma'>,</span> <span class='label'>after:</span> <span class='id identifier rubyid_after'>after</span><span class='comma'>,</span> <span class='label'>limit:</span> <span class='id identifier rubyid_limit'>limit</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>query:</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_pinned_messages-instance_method">
+  
+    #<strong>get_pinned_messages</strong>(channel_id)  &#x21d2; <tt>Array&lt;Hash&lt;Symbol, Object&gt;&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get all pinned messages in a channel.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel to fetch the pins of.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Hash&lt;Symbol, Object&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An array of pinned [message objects](<a href="https://discord.com/developers/docs/resources/channel#message-object">discord.com/developers/docs/resources/channel#message-object</a>).</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#get-pinned-messages">discord.com/developers/docs/resources/channel#get-pinned-messages</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+370
+371
+372
+373</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 370</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_pinned_messages'>get_pinned_messages</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:GET</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/pins</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_reactions-instance_method">
+  
+    #<strong>get_reactions</strong>(channel_id, message_id, emoji, before: :undef, after: :undef, limit: :undef)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>If your emoji is in the wrong format you will receive error code `10014: Unknown Emoji`</p>
+</div>
+  </div>
+
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>If the emoji name is unknown, you can provide any alphanumeric value as a placeholder.</p>
+</div>
+  </div>
+
+
+<p>Get a list of users that have reacted with a specific emoji.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel that contains the target message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>emoji</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Either a unicode emoji, or Discord emoji in the format of `name:id`.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>before</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Retreive users before this ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>after</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Retreive users after this ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>limit</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The maximum number of users to receive. Between 1-100.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#get-reactions">discord.com/developers/docs/resources/channel#get-reactions</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+218
+219
+220
+221
+222
+223
+224</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 218</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_reactions'>get_reactions</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='id identifier rubyid_emoji'>emoji</span><span class='comma'>,</span> <span class='label'>before:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>after:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>limit:</span> <span class='symbol'>:undef</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_escaped_emoji'>escaped_emoji</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_encode_www_form_component'>encode_www_form_component</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='id identifier rubyid_filter_undef'>filter_undef</span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>before:</span> <span class='id identifier rubyid_before'>before</span><span class='comma'>,</span> <span class='label'>after:</span> <span class='id identifier rubyid_after'>after</span><span class='comma'>,</span> <span class='label'>limit:</span> <span class='id identifier rubyid_limit'>limit</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:GET</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/messages/%{message_id}/reactions/%{emoji}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>message_id:</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='label'>emoji:</span> <span class='id identifier rubyid_escaped_emoji'>escaped_emoji</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>query:</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="group_dm_add_recipient-instance_method">
+  
+    #<strong>group_dm_add_recipient</strong>(channel_id, user_id, access_token:, nick: :undef)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add a recipient to a group DM using their access token.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the group DM to add the user to.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the user to add.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>access_token</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The access token of a user that has granted your app the `gdm.join` scope.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>nick</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The nickname of the user being added.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#group-dm-add-recipient">discord.com/developers/docs/resources/channel#group-dm-add-recipient</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+406
+407
+408
+409
+410
+411</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 406</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_group_dm_add_recipient'>group_dm_add_recipient</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='label'>access_token:</span><span class='comma'>,</span> <span class='label'>nick:</span> <span class='symbol'>:undef</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:PUT</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/recipients/%{user_id}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>user_id:</span> <span class='id identifier rubyid_user_id'>user_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='id identifier rubyid_filter_undef'>filter_undef</span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>access_token:</span> <span class='id identifier rubyid_access_token'>access_token</span><span class='comma'>,</span> <span class='label'>nick:</span> <span class='id identifier rubyid_nick'>nick</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>json:</span> <span class='id identifier rubyid_json'>json</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="group_dm_remove_recipient-instance_method">
+  
+    #<strong>group_dm_remove_recipient</strong>(channel_id, user_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove a recipient from a group DM.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel the user is being removed from.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the user being removed from the group DM.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#group-dm-remove-recipient">discord.com/developers/docs/resources/channel#group-dm-remove-recipient</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+417
+418
+419
+420
+421</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 417</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_group_dm_remove_recipient'>group_dm_remove_recipient</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_user_id'>user_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:DELETE</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/recipients/%{user_id}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                    <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>user_id:</span> <span class='id identifier rubyid_user_id'>user_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="modify_channel-instance_method">
+  
+    #<strong>modify_channel</strong>(channel_id, name: :undef, type: :undef, position: :undef, topic: :undef, nsfw: :undef, rate_limit_per_user: :undef, bitrate: :undef, user_limit: :undef, permission_overwrites: :undef, parent_id: :undef, reason: nil)  &#x21d2; <tt>Hash&lt;Symbol, Object&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>Fires a channel update. In the event of modifying a category, individual channel updates will fire for each child that is also modified.</p>
+</div>
+  </div>
+
+
+<p>Update a channel&#39;s settings. Parameters other than `channel_id` are all optional.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Channel name, must be between 2-100 characters.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Channel type, only switching between `GUILD_TEXT` and `GUILD_NEWS` is supported on guilds which have the `NEWS` feature.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>position</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The position of the channel in the listing.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>topic</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Channel topic, must be between 0-1024 characters. Only usable in `GUILD_TEXT` and `GUILD_NEWS` channels.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>nsfw</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Whether the channel is not safe for work. Only usable on `GUILD_TEXT`, `GUILD_NEWS`, and `GUILD_STORE` channels.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>rate_limit_per_user</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The amount of seconds a user has to wait between sending messages. This value can be between 0-21600 seconds. Users and bots with `MANAGE_MESSAGES` or `MANAGE_CHANNEL` are unaffected by this limit. Only usable in `GUILD_TEXT` channels.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>bitrate</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The bitrate of a `GUILD_VOICE` channel. Between 8000 and 96000, or 128000 for VIP servers.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>user_limit</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The maximum amount of users allowed in a voice channel. 0 is no limit, and limiting values can be between 1-99.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>permission_overwrites</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Overwrite, Hash&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Channel or category specific permissions.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>parent_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the new parent category for a channel. Only usable in `GUILD_TEXT`, `GUILD_NEWS`, `GUILD_STORE`, and `GUILD_VOICE` channels.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The reason for modifying the channel.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;Symbol, Object&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A [channel](<a href="https://discord.com/developers/docs/resources/channel#channel-object">discord.com/developers/docs/resources/channel#channel-object</a>) object.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>MANAGE_CHANNELS</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#modify-channel">discord.com/developers/docs/resources/channel#modify-channel</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_modify_channel'>modify_channel</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='label'>name:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>type:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>position:</span> <span class='symbol'>:undef</span><span class='comma'>,</span>
+                   <span class='label'>topic:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>nsfw:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>rate_limit_per_user:</span> <span class='symbol'>:undef</span><span class='comma'>,</span>
+                   <span class='label'>bitrate:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>user_limit:</span> <span class='symbol'>:undef</span><span class='comma'>,</span>
+                   <span class='label'>permission_overwrites:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>parent_id:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='id identifier rubyid_filter_undef'>filter_undef</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+                        <span class='label'>name:</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>type:</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='label'>position:</span> <span class='id identifier rubyid_position'>position</span><span class='comma'>,</span> <span class='label'>topic:</span> <span class='id identifier rubyid_topic'>topic</span><span class='comma'>,</span> <span class='label'>nsfw:</span> <span class='id identifier rubyid_nsfw'>nsfw</span><span class='comma'>,</span>
+                        <span class='label'>rate_limit_per_user:</span> <span class='id identifier rubyid_rate_limit_per_user'>rate_limit_per_user</span><span class='comma'>,</span> <span class='label'>bitrate:</span> <span class='id identifier rubyid_bitrate'>bitrate</span><span class='comma'>,</span>
+                        <span class='label'>user_limit:</span> <span class='id identifier rubyid_user_limit'>user_limit</span><span class='comma'>,</span> <span class='label'>permission_overwrites:</span> <span class='id identifier rubyid_permission_overwrites'>permission_overwrites</span><span class='comma'>,</span>
+                        <span class='label'>parent_id:</span> <span class='id identifier rubyid_parent_id'>parent_id</span>
+                      <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:PATCH</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>json:</span> <span class='id identifier rubyid_json'>json</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="trigger_typing_indicator-instance_method">
+  
+    #<strong>trigger_typing_indicator</strong>(channel_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Post a typing indicator for a channel.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>channel_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the channel to appear as typing in.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/channel#trigger-typing-indicator">discord.com/developers/docs/resources/channel#trigger-typing-indicator</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+361
+362
+363
+364</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/channel.rb', line 361</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_trigger_typing_indicator'>trigger_typing_indicator</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:POST</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/channels/%{channel_id}/typing</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Aug 28 15:23:08 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.25 (ruby-2.7.0).
+</div>
+
+    </div>
+  </body>
+</html>
