@@ -10,6 +10,10 @@ module Vox
       # @return [String, nil] The trace identifier this error originated from.
       attr_reader :trace
 
+      # @!visibility private
+      # Create an error from an API response.
+      # @param data [Hash<Symbol, Object>] The error object from the API.
+      # @param req_id [String] The trace ID for the originating request.
       def initialize(data, req_id = nil)
         @data = data
         @trace = req_id
@@ -46,6 +50,9 @@ module Vox
 
       # Status Code 5XX
       class ServerError < StandardError
+        # @!visibility private
+        # Create an API error that does not have a JSON body.
+        # @param req_id [String] The trace ID of the request.
         def initialize(req_id)
           @trace = req_id
           super('Internal Server Error')

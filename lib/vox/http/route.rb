@@ -24,6 +24,7 @@ module Vox
       #   the API path.
       attr_reader :params
 
+      # Create a new route to be used with {Client#request}
       # @param verb [#to_sym] The HTTP verb to be used when accessing the API path.
       # @param key [String] The unformatted route using Kernel.format syntax to
       #   incorporate the data provided in `params`.
