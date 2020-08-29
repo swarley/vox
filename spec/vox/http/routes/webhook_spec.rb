@@ -168,12 +168,4 @@ RSpec.describe Vox::HTTP::Routes::Webhook do
       end
     end
   end
-
-  describe '#execute_slack_compatible_webhook' do
-    pending # TODO
-  end
-
-  describe '#execute_github_compatible_webhook' do
-    pending # TODO
-  end
 end

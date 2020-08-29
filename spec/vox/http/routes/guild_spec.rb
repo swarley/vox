@@ -27,6 +27,14 @@ RSpec.describe Vox::HTTP::Routes::Guild do
     end
   end
 
+  describe '#get_guild' do
+    it 'makes a request with query parameters' do
+      client.get_guild(id)
+      route = Route.new(:GET, '/guilds/%{guild_id}', guild_id: id)
+      expect(client).to have_received(:request).with(route, query: {})
+    end
+  end
+
   describe '#get_guild_preview' do
     it 'makes a request with no parameters' do
       client.get_guild_preview(id)

@@ -109,10 +109,10 @@ module Vox
 
         data = raw ? resp.body : MultiJson.load(resp.body, symbolize_keys: true)
         case resp.status
-        when 200
-          data
         when 204, 304
           nil
+        when 200..300
+          data
         when 400
           raise Error::BadRequest.new(data, req_id)
         when 401
