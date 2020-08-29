@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Vox::HTTP::Routes::AuditLog
+  
+    &mdash; Documentation by YARD 0.9.25
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Vox::HTTP::Routes::AuditLog";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (A)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Vox.html" title="Vox (module)">Vox</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../HTTP.html" title="Vox::HTTP (module)">HTTP</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Routes.html" title="Vox::HTTP::Routes (module)">Routes</a></span></span>
+     &raquo; 
+    <span class="title">AuditLog</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Vox::HTTP::Routes::AuditLog
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/vox/http/routes/audit_log.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>HTTP methods for accessing information about a <span class='object_link'><a href="Guild.html" title="Vox::HTTP::Routes::Guild (module)">Guild</a></span>&#39;s <span class='object_link'><a href="" title="Vox::HTTP::Routes::AuditLog (module)">AuditLog</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="EVENTS-constant" class="">EVENTS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>TODO: Is this the best place for these?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='label'>GUILD_UPDATE:</span> <span class='int'>1</span><span class='comma'>,</span>
+  <span class='label'>CHANNEL_CREATE:</span> <span class='int'>10</span><span class='comma'>,</span>
+  <span class='label'>CHANNEL_UPDATE:</span> <span class='int'>11</span><span class='comma'>,</span>
+  <span class='label'>CHANNEL_DELETE:</span> <span class='int'>12</span><span class='comma'>,</span>
+  <span class='label'>CHANNEL_OVERWRITE_CREATE:</span> <span class='int'>13</span><span class='comma'>,</span>
+  <span class='label'>CHANNEL_OVERWRITE_UPDATE:</span> <span class='int'>14</span><span class='comma'>,</span>
+  <span class='label'>CHANNEL_OVERWRITE_DELETE:</span> <span class='int'>15</span><span class='comma'>,</span>
+  <span class='label'>MEMBER_KICK:</span> <span class='int'>20</span><span class='comma'>,</span>
+  <span class='label'>MEMBER_PRUNE:</span> <span class='int'>21</span><span class='comma'>,</span>
+  <span class='label'>MEMBER_BAN_ADD:</span> <span class='int'>22</span><span class='comma'>,</span>
+  <span class='label'>MEMBER_BAN_REMOVE:</span> <span class='int'>23</span><span class='comma'>,</span>
+  <span class='label'>MEMBER_UPDATE:</span> <span class='int'>24</span><span class='comma'>,</span>
+  <span class='label'>MEMBER_ROLE_UPDATE:</span> <span class='int'>25</span><span class='comma'>,</span>
+  <span class='label'>MEMBER_MOVE:</span> <span class='int'>26</span><span class='comma'>,</span>
+  <span class='label'>MEMBER_DISCONNECT:</span> <span class='int'>27</span><span class='comma'>,</span>
+  <span class='label'>BOT_ADD:</span> <span class='int'>28</span><span class='comma'>,</span>
+  <span class='label'>ROLE_CREATE:</span> <span class='int'>30</span><span class='comma'>,</span>
+  <span class='label'>ROLE_UPDATE:</span> <span class='int'>31</span><span class='comma'>,</span>
+  <span class='label'>ROLE_DELETE:</span> <span class='int'>32</span><span class='comma'>,</span>
+  <span class='label'>INVITE_CREATE:</span> <span class='int'>40</span><span class='comma'>,</span>
+  <span class='label'>INVITE_UPDATE:</span> <span class='int'>41</span><span class='comma'>,</span>
+  <span class='label'>INVITE_DELETE:</span> <span class='int'>42</span><span class='comma'>,</span>
+  <span class='label'>WEBHOOK_CREATE:</span> <span class='int'>50</span><span class='comma'>,</span>
+  <span class='label'>WEBHOOK_UPDATE:</span> <span class='int'>51</span><span class='comma'>,</span>
+  <span class='label'>WEBHOOK_DELETE:</span> <span class='int'>52</span><span class='comma'>,</span>
+  <span class='label'>EMOJI_CREATE:</span> <span class='int'>60</span><span class='comma'>,</span>
+  <span class='label'>EMOJI_UPDATE:</span> <span class='int'>61</span><span class='comma'>,</span>
+  <span class='label'>EMOJI_DELETE:</span> <span class='int'>62</span><span class='comma'>,</span>
+  <span class='label'>MESSAGE_DELETE:</span> <span class='int'>72</span><span class='comma'>,</span>
+  <span class='label'>MESSAGE_BULK_DELETE:</span> <span class='int'>73</span><span class='comma'>,</span>
+  <span class='label'>MESSAGE_PIN:</span> <span class='int'>74</span><span class='comma'>,</span>
+  <span class='label'>MESSAGE_UNPIN:</span> <span class='int'>75</span><span class='comma'>,</span>
+  <span class='label'>INTEGRATION_CREATE:</span> <span class='int'>80</span><span class='comma'>,</span>
+  <span class='label'>INTEGRATION_UPDATE:</span> <span class='int'>81</span><span class='comma'>,</span>
+  <span class='label'>INTEGRATION_DELETE:</span> <span class='int'>82</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_guild_audit_log-instance_method" title="#get_guild_audit_log (instance method)">#<strong>get_guild_audit_log</strong>(guild_id, user_id: :undef, action_type: :undef, before: :undef, limit: :undef)  &#x21d2; Hash&lt;:audit_log_entries, Array&lt;Object&gt;&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Fetch a guild&#39;s audit log.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="get_guild_audit_log-instance_method">
+  
+    #<strong>get_guild_audit_log</strong>(guild_id, user_id: :undef, action_type: :undef, before: :undef, limit: :undef)  &#x21d2; <tt>Hash&lt;:audit_log_entries, Array&lt;Object&gt;&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Fetch a guild&#39;s audit log. [View on Discord&#39;s docs](<a href="https://discord.com/developers/docs/resources/audit-log#get-guild-audit-log">discord.com/developers/docs/resources/audit-log#get-guild-audit-log</a>)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>guild_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the guild to fetch audit log entries from.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the user to filter events for.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>action_type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the audit log event to filter for. Either a key from <span class='object_link'><a href="#EVENTS-constant" title="Vox::HTTP::Routes::AuditLog::EVENTS (constant)">EVENTS</a></span> or the corresponding integer value.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>before</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the audit log entry to fetch before chronologically.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>limit</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The maximum amount of entries to return. Defaults to 50 if no value is supplied. Maximum of 100, minimum of 1.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;:audit_log_entries, Array&lt;Object&gt;&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Required Permissions:</p>
+<ul class="vox.permissions">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>VIEW_AUDIT_LOG</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">View On Discord's Docs:</p>
+<ul class="vox.api_docs">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p><a href="https://discord.com/developers/docs/resources/audit-log#get-guild-audit-log">discord.com/developers/docs/resources/audit-log#get-guild-audit-log</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes/audit_log.rb', line 63</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_guild_audit_log'>get_guild_audit_log</span><span class='lparen'>(</span><span class='id identifier rubyid_guild_id'>guild_id</span><span class='comma'>,</span> <span class='label'>user_id:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>action_type:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>before:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>limit:</span> <span class='symbol'>:undef</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_route'>route</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../HTTP.html" title="Vox::HTTP (module)">HTTP</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Route.html" title="Vox::HTTP::Route (class)">Route</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Route.html#initialize-instance_method" title="Vox::HTTP::Route#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:GET</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/guilds/%{guild_id}/audit-logs</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>guild_id:</span> <span class='id identifier rubyid_guild_id'>guild_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_query_params'>query_params</span> <span class='op'>=</span> <span class='id identifier rubyid_filter_undef'>filter_undef</span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>user_id:</span> <span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='label'>action_type:</span> <span class='id identifier rubyid_action_type'>action_type</span><span class='comma'>,</span> <span class='label'>before:</span> <span class='id identifier rubyid_before'>before</span><span class='comma'>,</span> <span class='label'>limit:</span> <span class='id identifier rubyid_limit'>limit</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>query:</span> <span class='id identifier rubyid_query_params'>query_params</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sat Aug 29 18:17:39 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.25 (ruby-2.7.0).
+</div>
+
+    </div>
+  </body>
+</html>
