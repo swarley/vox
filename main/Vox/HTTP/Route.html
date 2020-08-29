@@ -341,7 +341,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>A new instance of Route.</p>
+<p>Create a new route to be used with <span class='object_link'><a href="Client.html#request-instance_method" title="Vox::HTTP::Client#request (method)">Client#request</a></span>.</p>
 </div></span>
   
 </li>
@@ -389,7 +389,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns a new instance of Route.</p>
+<p>Create a new route to be used with <span class='object_link'><a href="Client.html#request-instance_method" title="Vox::HTTP::Client#request (method)">Client#request</a></span></p>
 
 
   </div>
@@ -455,15 +455,15 @@
       <pre class="lines">
 
 
-31
 32
 33
 34
 35
-36</pre>
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vox/http/route.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/route.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_verb'>verb</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
   <span class='ivar'>@verb</span> <span class='op'>=</span> <span class='id identifier rubyid_verb'>verb</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
@@ -786,12 +786,12 @@
       <pre class="lines">
 
 
-54
 55
-56</pre>
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vox/http/route.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/route.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='ivar'>@verb</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_verb'>verb</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@key</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@params</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_params'>params</span>
@@ -845,14 +845,14 @@
       <pre class="lines">
 
 
-40
 41
 42
 43
-44</pre>
+44
+45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vox/http/route.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/route.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_format'>format</span>
   <span class='kw'>return</span> <span class='ivar'>@key</span> <span class='kw'>if</span> <span class='ivar'>@params</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -908,12 +908,12 @@
       <pre class="lines">
 
 
-47
 48
-49</pre>
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vox/http/route.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/route.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_major_param'>major_param</span>
   <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='op'>*</span><span class='const'><span class='object_link'><a href="#MAJOR_PARAMS-constant" title="Vox::HTTP::Route::MAJOR_PARAMS (constant)">MAJOR_PARAMS</a></span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span>
@@ -928,7 +928,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Aug 29 06:44:24 2020 by
+  Generated on Sat Aug 29 06:56:26 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.25 (ruby-2.7.0).
 </div>
