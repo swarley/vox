@@ -1,8 +1,12 @@
 # Vox
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/vox`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![Maintainability](https://api.codeclimate.com/v1/badges/769cea19478c3d5cdfeb/maintainability)](https://codeclimate.com/github/swarley/vox/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/769cea19478c3d5cdfeb/test_coverage)](https://codeclimate.com/github/swarley/vox/test_coverage)
+[![Gem Version](https://badge.fury.io/rb/vox.svg)](https://badge.fury.io/rb/vox)
+[![Inline docs](http://inch-ci.org/github/swarley/vox.svg?branch=main)](http://inch-ci.org/github/swarley/vox)
 
-TODO: Delete this and the text above, and describe your gem
+A gem for interacting with the Discord API. Intends to cover the entire API, have high spec coverage, complete documentation coverage, and
+be as modular as possible with room for flexibility of use at every level.
 
 ## Installation
 
@@ -22,13 +26,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Currently only the HTTP API has been implemented, and it does not return abstracted objects. Rather it is simply a client to assist
+in making requests and handling rate limiting.
 
 ## Contributing
 
