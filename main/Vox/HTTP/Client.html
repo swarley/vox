@@ -297,14 +297,14 @@
       <pre class="lines">
 
 
-53
-54
-55
-56
-57</pre>
+46
+47
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vox/http/client.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/client.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
   <span class='ivar'>@conn</span> <span class='op'>=</span> <span class='id identifier rubyid_default_connection'>default_connection</span>
@@ -461,6 +461,13 @@
       <pre class="lines">
 
 
+60
+61
+62
+63
+64
+65
+66
 67
 68
 69
@@ -472,17 +479,10 @@
 75
 76
 77
-78
-79
-80
-81
-82
-83
-84
-85</pre>
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vox/http/client.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/client.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='comma'>,</span> <span class='label'>query:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>json:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>raw:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_req'>req</span> <span class='op'>=</span> <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_build_request'>build_request</span><span class='lparen'>(</span><span class='id identifier rubyid_route'>route</span><span class='period'>.</span><span class='id identifier rubyid_verb'>verb</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
@@ -513,7 +513,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Aug 29 18:07:11 2020 by
+  Generated on Mon Sep 14 05:55:06 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.25 (ruby-2.7.0).
 </div>

@@ -79,7 +79,7 @@
   <dl>
     <dt>Defined in:</dt>
     <dd>lib/vox.rb<span class="defines">,<br />
-  lib/vox/version.rb,<br /> lib/vox/http/util.rb,<br /> lib/vox/http/error.rb,<br /> lib/vox/http/route.rb,<br /> lib/vox/http/client.rb,<br /> lib/vox/http/routes.rb,<br /> lib/vox/http/upload_io.rb,<br /> lib/vox/http/routes/user.rb,<br /> lib/vox/http/routes/emoji.rb,<br /> lib/vox/http/routes/guild.rb,<br /> lib/vox/http/routes/voice.rb,<br /> lib/vox/http/routes/invite.rb,<br /> lib/vox/http/routes/channel.rb,<br /> lib/vox/http/routes/gateway.rb,<br /> lib/vox/http/routes/webhook.rb,<br /> lib/vox/http/routes/audit_log.rb,<br /> lib/vox/http/middleware/rate_limiter.rb,<br /> lib/vox/http/middleware/log_formatter.rb</span>
+  lib/vox/version.rb,<br /> lib/vox/http/util.rb,<br /> lib/vox/http/error.rb,<br /> lib/vox/http/route.rb,<br /> lib/vox/http/client.rb,<br /> lib/vox/http/routes.rb,<br /> lib/vox/gateway/client.rb,<br /> lib/vox/http/upload_io.rb,<br /> lib/vox/http/routes/user.rb,<br /> lib/vox/gateway/websocket.rb,<br /> lib/vox/http/routes/emoji.rb,<br /> lib/vox/http/routes/guild.rb,<br /> lib/vox/http/routes/voice.rb,<br /> lib/vox/http/routes/invite.rb,<br /> lib/vox/http/routes/channel.rb,<br /> lib/vox/http/routes/gateway.rb,<br /> lib/vox/http/routes/webhook.rb,<br /> lib/vox/http/routes/audit_log.rb,<br /> lib/vox/http/middleware/rate_limiter.rb,<br /> lib/vox/http/middleware/log_formatter.rb</span>
 </dd>
   </dl>
   
@@ -100,7 +100,7 @@
 <p class="children">
   
     
-      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Vox/HTTP.html" title="Vox::HTTP (module)">HTTP</a></span>
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Vox/Gateway.html" title="Vox::Gateway (module)">Gateway</a></span>, <span class='object_link'><a href="Vox/HTTP.html" title="Vox::HTTP (module)">HTTP</a></span>
     
   
     
@@ -121,7 +121,7 @@
           <div class="docstring">
   <div class="discussion">
     
-<p>Overall gem version, each component also contains its own version</p>
+<p>Gem version</p>
 
 
   </div>
@@ -131,7 +131,7 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>0.2.1</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>0.2.3</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
     </dl>
   
@@ -142,12 +142,178 @@
 
 
 
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
 
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#setup_default_logger-class_method" title="setup_default_logger (class method)">.<strong>setup_default_logger</strong>(root_level: :info, **rules)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Setup default appenders, log level, and formatting scheme.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="setup_default_logger-class_method">
+  
+    .<strong>setup_default_logger</strong>(root_level: :info, **rules)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Setup default appenders, log level, and formatting scheme.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code>Vox.setup_default_logger(root_level: :warn, Vox::HTTP: :info, Vox::Gateway: :info)</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>root_level</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:info</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The default logging level for all `Vox` loggers.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>rules</span>
+      
+      
+        <span class='type'>(<tt>Hash&lt;Class, Symbol&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Custom levels for each desired class.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/vox.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_setup_default_logger'>setup_default_logger</span><span class='lparen'>(</span><span class='label'>root_level:</span> <span class='symbol'>:info</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_rules'>rules</span><span class='rparen'>)</span>
+  <span class='const'>Logging</span><span class='period'>.</span><span class='id identifier rubyid_logger'>logger</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="" title="Vox (module)">Vox</a></span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_level'>level</span> <span class='op'>=</span> <span class='id identifier rubyid_root_level'>root_level</span>
+
+  <span class='id identifier rubyid_rules'>rules</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_log'>log</span><span class='comma'>,</span> <span class='id identifier rubyid_level'>level</span><span class='op'>|</span>
+    <span class='const'>Logging</span><span class='period'>.</span><span class='id identifier rubyid_logger'>logger</span><span class='lbracket'>[</span><span class='id identifier rubyid_log'>log</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_level'>level</span> <span class='op'>=</span> <span class='id identifier rubyid_level'>level</span>
+  <span class='kw'>end</span>
+
+  <span class='const'>Logging</span><span class='period'>.</span><span class='id identifier rubyid_color_scheme'>color_scheme</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>vox_default</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                       <span class='label'>levels:</span> <span class='lbrace'>{</span>
+                         <span class='label'>debug:</span> <span class='symbol'>:magenta</span><span class='comma'>,</span>
+                         <span class='label'>info:</span> <span class='symbol'>:green</span><span class='comma'>,</span>
+                         <span class='label'>warn:</span> <span class='symbol'>:yellow</span><span class='comma'>,</span>
+                         <span class='label'>error:</span> <span class='symbol'>:red</span><span class='comma'>,</span>
+                         <span class='label'>fatal:</span> <span class='qsymbols_beg'>%i[</span><span class='tstring_content'>white</span><span class='words_sep'> </span><span class='tstring_content'>on_red</span><span class='tstring_end'>]</span></span>
+                       <span class='rbrace'>}</span><span class='comma'>,</span>
+                       <span class='label'>date:</span> <span class='symbol'>:blue</span><span class='comma'>,</span>
+                       <span class='label'>logger:</span> <span class='symbol'>:cyan</span><span class='rparen'>)</span>
+
+  <span class='const'>Logging</span><span class='period'>.</span><span class='id identifier rubyid_logger'>logger</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="" title="Vox (module)">Vox</a></span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_add_appenders'>add_appenders</span><span class='lparen'>(</span>
+    <span class='const'>Logging</span><span class='period'>.</span><span class='id identifier rubyid_appenders'>appenders</span><span class='period'>.</span><span class='id identifier rubyid_stdout'>stdout</span><span class='lparen'>(</span><span class='label'>layout:</span> <span class='const'>Logging</span><span class='period'>.</span><span class='id identifier rubyid_layouts'>layouts</span><span class='period'>.</span><span class='id identifier rubyid_pattern'>pattern</span><span class='lparen'>(</span><span class='label'>color_scheme:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>vox_default</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
 
       <div id="footer">
-  Generated on Sat Aug 29 18:07:09 2020 by
+  Generated on Mon Sep 14 05:55:05 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.25 (ruby-2.7.0).
 </div>

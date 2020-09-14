@@ -185,15 +185,15 @@
       <pre class="lines">
 
 
-17
 18
-19</pre>
+19
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/vox/http/routes.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'lib/vox/http/routes.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_included'>included</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
-  <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="Routes/AuditLog.html" title="Vox::HTTP::Routes::AuditLog (module)">AuditLog</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Routes/Channel.html" title="Vox::HTTP::Routes::Channel (module)">Channel</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Routes/Emoji.html" title="Vox::HTTP::Routes::Emoji (module)">Emoji</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Routes/Guild.html" title="Vox::HTTP::Routes::Guild (module)">Guild</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Routes/Invite.html" title="Vox::HTTP::Routes::Invite (module)">Invite</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Routes/User.html" title="Vox::HTTP::Routes::User (module)">User</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Routes/Voice.html" title="Vox::HTTP::Routes::Voice (module)">Voice</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Routes/Webhook.html" title="Vox::HTTP::Routes::Webhook (module)">Webhook</a></span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='op'>|</span> <span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_include'>include</span> <span class='id identifier rubyid_m'>m</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_constants'>constants</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='op'>|</span> <span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_include'>include</span> <span class='id identifier rubyid_const_get'>const_get</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -205,7 +205,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Aug 29 18:07:09 2020 by
+  Generated on Mon Sep 14 05:55:05 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.25 (ruby-2.7.0).
 </div>
