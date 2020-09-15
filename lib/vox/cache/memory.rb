@@ -13,6 +13,10 @@ module Vox
         @data[key]
       end
 
+      def get?(key)
+        @data[key]
+      end
+
       def set(key, value)
         @data[key, value]
       end

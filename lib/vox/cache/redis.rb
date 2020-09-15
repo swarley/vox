@@ -10,6 +10,10 @@ module Vox
         super(key, http)
       end
 
+      def get?(id)
+        @redis.get("#{@key}:#{id}")
+      end
+
       def set(id, data)
         @redis.set("#{@key}:#{id}", MultiJson.dump(data))
       end

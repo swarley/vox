@@ -7,6 +7,9 @@ module Vox
       def get(key)
       end
 
+      def get?(key)
+      end
+
       def set(key, value)
       end
     end
