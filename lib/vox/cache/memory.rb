@@ -14,7 +14,7 @@ module Vox
       end
 
       def get?(key)
-        @data[key]
+        get(key)
       end
 
       def set(key, value)
