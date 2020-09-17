@@ -5,7 +5,7 @@ require 'vox/cache/base'
 module Vox
   module Cache
     class Memory < Base
-      def initialize(_key)
+      def initialize
         @data = {}
       end
 
@@ -13,12 +13,12 @@ module Vox
         @data[key]
       end
 
-      def get?(key)
-        get(key)
+      def set(key, value)
+        @data[key] = value
       end
 
-      def set(key, value)
-        @data[key, value]
+      def delete(key)
+        @data.delete(key)
       end
     end
   end

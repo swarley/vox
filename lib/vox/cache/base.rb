@@ -7,10 +7,10 @@ module Vox
       def get(key)
       end
 
-      def get?(key)
+      def set(key, value)
       end
 
-      def set(key, value)
+      def delete(key)
       end
     end
   end
