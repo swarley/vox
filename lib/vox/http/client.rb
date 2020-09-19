@@ -100,10 +100,10 @@ module Vox
       def handle_response(resp, raw, req_id)
         raise Error::ServerError.new(req_id) if (500..600).cover? resp.status
 
+        return nil if resp.status == 204 || resp.status == 304
+
         data = raw ? resp.body : MultiJson.load(resp.body, symbolize_keys: true)
         case resp.status
-        when 204, 304
-          nil
         when 200..300
           data
         when 400
