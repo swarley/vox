@@ -166,7 +166,7 @@ module Vox
     # @!endgroup
 
     def modify(username: nil, avatar: nil)
-      update_data(@client.http.modify_current_user(username: username, avatar: avatar))
+      @client.http.modify_current_user(username: username, avatar: avatar)
     end
 
     # A connection a user has to a service.
@@ -216,6 +216,8 @@ module Vox
       def update_data(data)
         inte = data[:integrations]
         data[:integrations] = inte.collect { |d| Guild::Integration.new(@client, d) } if inte
+
+        super
       end
     end
   end

@@ -57,8 +57,7 @@ module Vox
     def modify(name: :undef, roles: :undef)
       roles = roles.is_a?(Array) ? roles.collect { |obj| obj&.id || obj } : roles
 
-      data = @client.modify_guild_emoji(guild.id, @id, name: name, role: roles)
-      update_data(data)
+      @client.modify_guild_emoji(guild.id, @id, name: name, role: roles)
     end
 
     # @return [Guild, nil] The guild that owns this emoji.

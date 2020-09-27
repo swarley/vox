@@ -12,16 +12,18 @@ module Vox
       update_data(data)
     end
 
+    def difference(data)
+      data.reject { |key, val| instance_variable_get("@#{key}") == val }
+    end
+
     # Generic update_data for objects without nesting
     # @api private
     def update_data(data)
-      # Used for when subclasses wrap in a synchronize
-      own_lock = @mutex.owned?
+      @mutex.synchronize do
+        keys = data.keys
 
-      @mutex.lock unless own_lock
-      keys = data.keys
-      keys.each { |key| instance_variable_set("@#{key}", data[key]) }
-      @mutex.unlock unless own_lock
+        keys.each { |key| instance_variable_set("@#{key}", data[key]) }
+      end
     end
 
     # Override the default inspect to not show internal instance variables.
@@ -29,7 +31,7 @@ module Vox
     def inspect
       relevant_ivars = instance_variables - %i[@client @__events @mutex]
       ivar_pairs = relevant_ivars.collect { |ivar| [ivar, instance_variable_get(ivar)] }
-      ivar_strings = ivar_pairs.collect { |iv| "#{iv[0]}=#{iv[1].inspect}" }
+      ivar_strings = ivar_pairs.collect { |name, value| "#{name}=#{value.inspect}" }
       "#<#{self.class} #{ivar_strings.join(' ')}>"
     end
 

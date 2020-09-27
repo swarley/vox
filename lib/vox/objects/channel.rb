@@ -153,8 +153,7 @@ module Vox
     # @option attrs [String, Integer] parent_id
     # @see Vox::HTTP::Routes::Channel#modify_channel Modify channel options
     def modify(**attrs)
-      data = @client.http.modify_channel(@id, **attrs)
-      update_data(data)
+      @client.http.modify_channel(@id, **attrs)
     end
 
     # @!attribute [r] guild
@@ -172,21 +171,22 @@ module Vox
     # @!visibility private
     # @param data [Hash] The data to update the object with.
     def update_data(data)
-      @mutex.synchronize do
-        super
+      data.delete(:guild_hashes)
 
-        if data.include?(:recipients)
-          @recipients.each do |user_data|
-            @client.cache_upsert(:user, user_data[:id], User.new(@client, user_data))
-          end
-          @recipients = data[:recipients].collect { |user| @client.user(user[:id]) }
+      if data.include?(:recipients)
+        data[:recipients].map! do |user_data|
+          User.new(@client, user_data) unless user_data.is_a?(User)
         end
 
-        if data.include?(:last_pin_timestamp)
-          lpt = data[:last_pin_timestamp]
-          @last_pin_timestamp = lpt ? Time.iso8601(lpt) : nil
-        end
+        data[:recipients].each { |u| @client.cache_upsert(:user, u[:id], u) }
       end
+
+      if data.include?(:last_pin_timestamp) && data[:last_pin_timestamp].is_a?(String)
+        lpt = data[:last_pin_timestamp]
+        data[:last_pin_timestamp] = lpt ? Time.iso8601(lpt) : nil
+      end
+
+      super
     end
   end
 end

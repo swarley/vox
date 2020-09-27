@@ -96,6 +96,10 @@ module Vox
       AuditLog.new(@client, log)
     end
 
+    def modify(**args)
+      @client.http.modify_guild(@id, **args)
+    end
+
     # @!visibility private
     def update_data(data)
       id_keys = %i[afk_channel_id owner_id system_channel_id rules_channel_id public_updates_channel_id]

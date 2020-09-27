@@ -47,8 +47,7 @@ module Vox
     # @param avatar [String, nil] The avatar data for this webhook. `nil` to remove.
     # @param channel_id [String, nil] The channel ID this webhook should post in.
     def modify(name: :undef, avatar: :undef, channel_id: :undef)
-      data = @client.http.modify_webhook(@id, name: name, avatar: avatar, channel_id: channel_id)
-      update_data(data)
+      @client.http.modify_webhook(@id, name: name, avatar: avatar, channel_id: channel_id)
     end
 
     # Delete this webhook.
