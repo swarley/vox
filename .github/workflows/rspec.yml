@@ -35,6 +35,6 @@ jobs:
       run: bundle exec rake
     - name: Upload CodeClimate coverage
       env:
-        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID}}
+        CC_TEST_REPORTER_ID: 35f13e7b216ab55da300d3b9f0dab60cfca0c5c21a287783464255b358e2d697
       if: ${{ matrix.ruby == 2.7 && matrix.os == 'ubuntu-20.04' }}
       run: ./cc-test-reporter after-build
